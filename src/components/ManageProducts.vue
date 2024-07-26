@@ -2,7 +2,7 @@
     <h1>Manage Products</h1>
     <v-btn @click="add_dialog = true">Add a Product</v-btn>
     <!-- Add Products section -->
-    <!--dialogue is a pop-up-->
+    <!--dialog is a pop-up-->
     <v-dialog v-model="add_dialog" width="auto">
         <v-card class="mx-auto my-12">
             <v-card-item>
@@ -216,7 +216,7 @@
             save(){
                 try {
                     axios
-                    .post('https://camelshopbackend-1.onrender.com', this.newProduct)
+                    .post('https://camelshopii.onrender.com/api/products', this.newProduct)
                     .then((response) => console.log(response))
                     this.fetchProducts()
                     this.add_dialog = false
